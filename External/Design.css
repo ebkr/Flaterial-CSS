@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono');
+
+:root {
+    --primary-colour: cadetblue;
+    --box-shadow-colour: grey;
+    --header-underline-colour: white;
+    --header-text-colour: white;
+    --animation-time: 0.1s;
+    --button-shadow-colour: black;
+    --button-text-colour: white;
+	--highlight-colour: papayawhip;
+	--highlight-text-colour: black;
+}
+
+* {
+    position: relative;
+    font-family: "Open Sans", "Arial";
+    margin: 0px;
+}
+
+html, body {
+    margin: 0px;
+}
+
+.Container {
+    width: 100%;
+    margin: 0px;
+}
+
+.Row {
+    max-width: 1180px;
+    margin: 0px auto;
+    padding: 20px;
+    padding-left: 30px;
+    box-shadow: 0px 1px 2px var(--box-shadow-colour);
+}
+
+.Flat-Row {
+    max-width: 1180px;
+    margin: 0px auto;
+    padding: 20px;
+    padding-left: 30px;
+}
+
+.Title {
+    padding-top: 40px;
+    padding-bottom: 5px;
+}
+
+#Header {
+    box-shadow: 0px 0px 0px 0px;
+    padding: 20px;
+}
+
+.Links {
+    margin: 10px 10px;
+    transition: color var(--animation-time) linear;
+    transition: box-shadow var(--animation-time) ease-out;
+}
+
+.Links:hover {
+    color: var(--header-text-colour);
+    box-shadow: 0px 1px 0px var(--header-underline-colour);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.Code {
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0px 0px 1px var(--box-shadow-colour);
+    font-family: "Share Tech Mono", monospace;
+}
+
+::selection {
+	background-color: var(--highlight-colour);
+	color: var(--highlight-text-colour);
+}
+
+.Table {
+    table-layout: fixed;
+}
+
+.Table, .Table * {
+    border-collapse: collapse;
+    margin: 0px;
+    word-wrap: break-word;
+}
+
+.Table *{
+    padding: 5px;
+}
+
+.Table tr:nth-child(even) {
+    background-color:  whitesmoke;
+    box-shadow: 0px 0px 1px var(--box-shadow-colour);
+}
+
+.Table td {
+    border-left: 1px solid lightgrey;
+}
+
+.Table td:nth-child(1) {
+    border-left: 0px;
+}
+
+/* Buttons */
+
+.Button {
+    outline: 0px;
+    border: 0px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    border-radius: 2px;
+    color: var(--button-text-colour);
+    box-shadow: 0px 0px 0px var(--button-shadow-colour);
+    transition: box-shadow var(--animation-time) linear;
+    cursor: pointer;
+}
+
+.Button:not(.Disabled):hover {
+    box-shadow: 0px 0px 6px var(--button-shadow-colour);
+}
+
+.Disabled:hover {
+    cursor: not-allowed;
+}
+
+.TextInput {
+    color: inherit;
+    background-color: rgba(0,0,0,0);
+    transition: box-shadow var(--animation-time) linear;
+    box-shadow: 0px 1px 0px var(--primary-colour);
+    border: 0px;
+    outline: 0px;
+    padding: 5px;
+}
+
+.TextInput:focus {
+    box-shadow: 0px 0px 0px 3px var(--primary-colour);
+}
+
+/* Colours */
+
+.Black {
+    background-color: #222;
+}
+
+.Grey {
+    background-color: #333;
+}
+
+.Blue {
+    background-color: cadetblue;
+}
+
+.White {
+    background-color: #FFF;
+}
+
+.LightGrey {
+    background-color: #F5F5F5;
+}
+
+.Green {
+    background-color: #5A5;
+}
+
+.Red {
+    background-color: #A55;
+}
+
+.Purple {
+    background-color: #6966DB;
+}
+
+.Primary {
+    background-color: var(--primary-colour);
+}
